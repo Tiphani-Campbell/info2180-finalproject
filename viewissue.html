@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Issue</title>
+       <link href="styles/viewissue.css" rel="stylesheet" type="text/css">
+       <script src="scripts/viewissue.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <img src="images/whitebug.png" alt="white bug">
+                <h2>BugMe Issue Tracker</h2>
+            </header>
+            <div id="right-sidebar">
+                <a href="homepage.html"><img src="images/home.svg" alt="home">Home</a>
+                <br>
+                <a href="newuser.html"><img src="images/adduser.svg" alt="add user">Add User</a>
+                <br>
+                <a href="newissue.html"><img src="images/addissue.svg" alt="add issue">New Issue</a>
+                <br>
+                <a href="logout.php"><img src="images/logout.svg" alt="logout">Logout</a>
+            </div>
+            <main>
+                <h1><div id="issue-title"></div></h1><!--issue title goes here-->
+                <h3><div id="issue-id"></div></h3><!--issue id goes here-->
+                <div id="issue-description"></div><!--issue description goes here-->
+                <ul>
+                    <li><div id="last-created"></div></li><!--last created information goes here-->
+                    <li><div id="last-updated"></div></li><!--last updated information goes here-->
+                </ul>
+                
+
+                <div class="issue-info">
+                    <h3>Assigned To:</h3>
+                    <div id="assigned-info"></div> <!--assigned to info goes here-->
+                    
+                    <h3>Type:</h3>
+                    <div id="type-info"></div> <!--issue type info goes here-->
+                    
+                    <h3>Priority:</h3>
+                    <div id="prority-info"></div> <!--issue priority goes here-->
+                    
+                    <h3>Status:</h3>
+                    <div id="status-info"></div> <!--issue status goes here-->
+                    
+                </div>
+                
+            </main>
+            <button type="button" class="closedbtn">Mark as Closed</button>
+            <button type="button" class="progressbtn">Mark In Progress</button>
+            
+        </div>
+    </body>
+</html>

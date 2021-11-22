@@ -1,0 +1,140 @@
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    width: 98%;
+    overflow: hidden;
+}
+header{
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    height: 55px;
+    width: 1000%;
+}
+header > h2{
+    position: absolute;
+    top: 10px;
+    left: 70px;
+}
+
+header > img{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    padding-left: 20px;
+    top: 20px;
+}
+.container{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows:150px auto auto;
+}
+
+main{
+    grid-row:2;
+    position: absolute;
+    top: 50px;
+    left: 350px;
+}
+main > h1{
+    font-size: 3rem;
+}
+#right-sidebar{
+    position: absolute;
+    background-color: lightgray;
+    height: 500px;
+    width: 250px;
+    top: 63px;
+    padding-bottom: 80px;
+    padding-top: 30px;
+    
+}
+#right-sidebar>a{
+    font-size: 14px;
+    display: inline-flex;
+    align-items: flex-end;
+}
+#right-sidebar>a>img{
+    padding-left: 20px;
+    padding-top: 20px;
+    height: 30px;
+    width: 30px;
+}
+
+#right-sidebar>a{
+    font-size: 14px;
+    display: inline-flex;
+    align-items: flex-end;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.issue-info{
+    position: absolute;
+    background-color: lightgrey;
+    width: 200px;
+    height: 320px;
+    border-color: slategray;
+    border-style: solid;
+    border-radius: 5px;
+    padding-left: 10px;
+    left: 650px;
+    top: 150px;
+}
+button{
+    height: 50px;
+    width: 215px;
+    border-radius: 5px;
+}
+.closedbtn{
+    position: absolute;
+    top: 540px;
+    left: 1000px;
+    border-color: #3385d6;
+    border-style: solid;
+    background-color: #3385d6;
+    color: white;
+    font-weight: bold;
+}
+.progressbtn{
+    position: absolute;
+    top: 600px;
+    left: 1000px;
+    border-color: #00cc66;
+    border-style: solid;
+    background-color: #00cc66;
+    color: white;
+    font-weight: bold;
+}
+#issue-title{
+    position: relative;
+    right: 7%;
+}
+#issue-id{
+    position: relative;
+    bottom: 30px;
+    right: 7%;
+}
+#issue-description{
+    position: relative;
+    word-break: break-all;
+    padding-right: 300px;
+    right: 7%;
+    color: gray;
+}
+ul{
+    list-style: none;
+}
+li{
+    background: url('../images/arrow.svg') no-repeat left 1px;
+    padding-left: 2em;
+    position: relative;
+    right: 12%;
+    top: 285px;
+    
+}
