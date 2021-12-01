@@ -66,57 +66,46 @@ a{
     display: inline-flex;
     align-items: flex-end;
 }
-label[for=fname]{
-    position: absolute;
-    top: 95px;
+label[for=firstname]{
     font-weight: bold;
 }
 
 label[for=email]{
-    position: absolute;
-    top: 425px;
     font-weight: bold;
 }
 
-label[for=lname]{
-    position: absolute;
-    top: 200px;
+label[for=lastname]{
     font-weight: bold;
 }
 
-label[for=pass]{
-    position: absolute;
-    top: 315px;
+label[for=password]{
     font-weight: bold;
 }
 
 #firstname{
     width: 500px;
     height: 20px;
+    margin-right: 10px;
 }
 
 #password{
-    position: absolute;
     width: 500px;
     height: 20px;
-    top: 340px;
+    margin-right: 10px;
 }
 
 #lastname{
-    position: absolute;
     width: 500px;
     height: 20px;
-    top: 225px;
+    margin-right: 10px;
 }
 
 #email{
-    position: absolute;
     width: 500px;
     height: 20px;
-    top:450px;
+    margin-right: 10px;
 }
-.button{
-    position: absolute;
+#submit_button{
     top: 500px;
     background-color: #3385d6;
     width: 200px;
@@ -126,4 +115,9 @@ label[for=pass]{
     border-radius: 5px;
     color: white;
     font-weight: bold;
+}
+.fill-out {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
