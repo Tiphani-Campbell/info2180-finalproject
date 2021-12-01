@@ -105,7 +105,7 @@ label[for=password]{
     height: 20px;
     margin-right: 10px;
 }
-#submit_button{
+.button{
     top: 500px;
     background-color: #3385d6;
     width: 200px;

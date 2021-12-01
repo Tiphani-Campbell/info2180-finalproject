@@ -2,7 +2,7 @@
 
 window.onload = function(){
     /* getting button, input fields and error display items from doc */
-    var submit_button = document.getElementById("submit_button");
+    var submit_button = document.getElementsByClassName("button")[0];
     var firstname_input = document.getElementById("firstname");
     var lastname_input = document.getElementById("lastname");
     var password_input = document.getElementById("password");
@@ -96,6 +96,7 @@ window.onload = function(){
     * function used to add user to database
     */
     submit_button.addEventListener("click", function(e){
+        e.preventDefault();
         val_email();
         if (ferror.innerHTML == "invalid name" || lerror.innerHTML == "invalid name" || perror.innerHTML == "invalid password" || perror.innerHTML == "weak password"){
             alert("edit invalids/weak");
