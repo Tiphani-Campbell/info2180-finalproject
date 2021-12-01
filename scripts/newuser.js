@@ -1,6 +1,7 @@
 "use strict";
 
 window.onload = function(){
+    /* getting button, input fields and error display items from doc */
     var submit_button = document.getElementById("submit_button");
     var firstname_input = document.getElementById("firstname");
     var lastname_input = document.getElementById("lastname");
@@ -11,8 +12,13 @@ window.onload = function(){
     var lerror = document.getElementById("lname_error");
     var perror = document.getElementById("password_error");
 
+    //variable to store email validity
     var rt = "";
 
+    /**
+    * function that checks if email provided is valid
+    * it changes the value of rt to be invalid email if invalid or empty string if valid
+    **/
     function val_email(){
         var xhttp = new XMLHttpRequest(); //create XMLHttpRequest object
         xhttp.onreadystatechange = function(){
@@ -27,6 +33,10 @@ window.onload = function(){
         xhttp.send(); //send php the character to find
     }
 
+    /**
+    * function that checks if first name provided is valid
+    * it displays invalid name in ferror if the name is invalid or empty string elsewise
+    **/
     firstname_input.oninput = function(e){
          var xhttp = new XMLHttpRequest(); //create XMLHttpRequest object
          xhttp.onreadystatechange = function(){
@@ -42,6 +52,10 @@ window.onload = function(){
 
     };
 
+    /**
+    * function that checks if last name provided is valid
+    * it displays invalid name in lerror if the name is invalid or empty string elsewise
+    **/
     lastname_input.oninput = function(e){
          var xhttp = new XMLHttpRequest(); //create XMLHttpRequest object
          xhttp.onreadystatechange = function(){
@@ -57,6 +71,12 @@ window.onload = function(){
 
     };
 
+    /**
+    * function that checks if password provided is valid
+    * it displays invalid password in perror if the name is invalid,
+    * weak password and a description of what is needed
+    * or empty string elsewise
+    **/
     password_input.oninput = function(e){
          var xhttp = new XMLHttpRequest(); //create XMLHttpRequest object
          xhttp.onreadystatechange = function(){
@@ -72,6 +92,9 @@ window.onload = function(){
 
     };
 
+    /**
+    * function used to add user to database
+    */
     submit_button.addEventListener("click", function(e){
         val_email();
         if (ferror.innerHTML == "invalid name" || lerror.innerHTML == "invalid name" || perror.innerHTML == "invalid password" || perror.innerHTML == "weak password"){
@@ -82,9 +105,16 @@ window.onload = function(){
             var xhttp = new XMLHttpRequest(); //create XMLHttpRequest object
             xhttp.onreadystatechange = function(){
                  if (this.readyState == 4 && this.status == 200) {
-                   alert(this.responseText); //display results in the result section
-                 }else{
-                    console.log(this.readyState + "status: " + this.status);
+                   var re = String(this.responseText);
+                   if (re == " User added "){
+                      firstname_input.value = "";
+                      lastname_input.value = "";
+                      password_input.value = "";
+                      email_input.value = "";
+                      alert(re); //display results in the result section
+                   }else{
+                      alert(re);
+                   }
                  }
             };
 

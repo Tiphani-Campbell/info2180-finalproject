@@ -15,10 +15,10 @@
     $stmt = $conn->query("INSERT INTO users(firstname,lastname,password,email,date_joined) VALUES ('$fname','$lname',MD5('$pssword'),'$email','$tday')");
 
     if ($stmt):
-        ?> "User added" <?php
+        ?> User added <?php
         return "";
     else:
-        ?> "User not added. Try Again" <?php
+        ?> User not added. Try Again <?php
         return "";
     endif;
 
