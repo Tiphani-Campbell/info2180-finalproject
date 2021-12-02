@@ -1,15 +1,16 @@
 body{
-    display: grid;
-    grid-template-rows: 30px auto;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     height: 100vh;
     width:100%;
     overflow: hidden;
-    
-    
+}
+.container{
+    display: grid;
+    grid-template-rows: auto auto auto auto;
 }
 header{
     background-color: black;
+    grid-row: 1;
     color: white;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -19,19 +20,17 @@ header{
 img{
     height: 350px;
     width: 350px;
-    grid-row: 1;
+    grid-row: 2;
     padding-left: 450px;
 }
 
 .form-group{
-    grid-row: 2;
+    grid-row: 3;
     padding-left: 380px;
 }
 
 .button{
-    position: absolute;
-    left: 600px;
-    top: 520px;
+    grid-row: 4;
     color: white;
     background-color: black;
     font-weight: bold;
@@ -40,7 +39,6 @@ img{
     border-radius: 30px;
     height: 50px;
     width: 150px;
-    cursor: pointer;
 }
 
 #emailaddr{
