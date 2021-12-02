@@ -125,10 +125,10 @@ button{
     word-break: break-all;
     padding-right: 300px;
     right: 7%;
-    color: gray;
 }
 ul{
     list-style: none;
+    color: gray;
 }
 li{
     background: url('../images/arrow.svg') no-repeat left 1px;
@@ -136,5 +136,4 @@ li{
     position: relative;
     right: 12%;
     top: 285px;
-    
 }
