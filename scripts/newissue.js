@@ -11,8 +11,25 @@ window.onload=function(){
 
     var titerror= document.getElementById("title_error");
     var deserror= document.getElementById("descrip_error");
+
+    var us=document.getElementById("newuser");
+    var usb=document.getElementById("newuserbr");
     
 
+    var xhttp1 = new XMLHttpRequest(); //create XMLHttpRequest object
+
+    xhttp1.onreadystatechange = function(){
+            if (this.readyState == 4 && this.status == 200) {
+                if (this.responseText != "True"){
+                    us.remove();
+                    usb.remove();
+                }
+            }
+        };
+
+    var url = "php/isadmin.php?";
+    xhttp1.open("GET", url); //specify the request type and where file is located in this case the file is in the same folder
+    xhttp1.send(); //send php the character to find
     
 
     var xhttp = new XMLHttpRequest(); //create XMLHttpRequest object

@@ -5,7 +5,7 @@
         ?>Description needs to be longer<?php
         return "";
     endif;
-    if (!preg_match("/^[a-zA-Z- 0-9.]*$/",$description)):
+    if (!preg_match("/^[a-zA-Z 0-9.,-\.'\"]*$/",$description)):
         ?>Description is invalid<?php
         return "";
     endif;
