@@ -1,8 +1,8 @@
 <?php
-    $fname = strip_tags($_GET['fname']);
-    $lname = strip_tags($_GET['lname']);
-    $pssword = strip_tags($_GET['password']);
-    $email = strip_tags($_GET['email']);
+    $fname = strip_tags($_POST['fname']);
+    $lname = strip_tags($_POST['lname']);
+    $pssword = strip_tags($_POST['password']);
+    $email = strip_tags($_POST['email']);
 
     $host = 'localhost';
     $username = 'root';

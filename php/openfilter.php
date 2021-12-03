@@ -23,7 +23,7 @@
         
         // show the publishers
         foreach ($issues as $issue) {
-            if($issue['status']=="Open"){
+            if($issue['status']=="OPEN"){
                 $cd=$issue['created'];
                 $changeDate = date("Y-m-d", strtotime($cd));
                 $assignedto=$issue['assigned_to'];
@@ -33,23 +33,13 @@
                 $fname=$names[0]['firstname'];
                 $lname=$names[0]['lastname'];
 
-                echo '<tr class="issue"> <td class="issuetit">'.$issue['id'].' '.'<a href="php/addticket.php?issueid='.$issue['id'].'&page=viewissue.html">'.$issue['title'].'</a></td>'
-            .'<td>'.$issue['type'].'</td>';
-            if($issue['status']=="Open"){
-            echo '<td class="open-status">'.$issue['status'].'</td>'
-            .'<td>'.$fname." ".$lname.'</td>'.'<td>'.$changeDate.'</td>'.'</tr>';
+                echo '<tr class="issue"> <td class="issuetit">'.$issue['id'].' '.'<a href="php/addticket.php?issueid='.$issue['id'].'&page=viewissue.html">'.$issue['title'].'</a></td><td>'.$issue['type'].'</td>'.'<td class="open-status">'.$issue['status'].'</td><td>'.$fname." ".$lname.'</td>'.'<td>'.$changeDate.'</td>'.'</tr>';
             
-            }elseif($issue['status']=="CLOSED"){
-            echo '<td class="closed-status">'.$issue['status'].'</td>'
-            .'<td>'.$fname." ".$lname.'</td>'.'<td>'.$changeDate.'</td>'.'</tr>';
-            }else{
-                echo '<td class="inprogress-status" style="background-color:yellow;color:black;">'.$issue['status'].'</td>'
-            .'<td>'.$fname." ".$lname.'</td>'.'<td>'.$changeDate.'</td>'.'</tr>';
-            }
             $i++;
-            }
-        }
+        
+    }
     }
     echo '</table>';
+}
 
 ?>

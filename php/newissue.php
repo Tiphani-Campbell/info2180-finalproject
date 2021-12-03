@@ -4,7 +4,7 @@
     $assign = strip_tags($_GET['assignment']);
     $type= strip_tags($_GET['type']);
     $priority = strip_tags($_GET['priority']);
-    $status = "Open";
+    $status = "OPEN";
     $id=1;
     
 

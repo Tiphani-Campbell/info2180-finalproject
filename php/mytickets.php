@@ -23,7 +23,7 @@
         
         // show the publishers
         foreach ($issues as $issue) {
-            if($issue['created_by']=="1"){
+            if($issue['assigned_to']=="1"){
                 $cd=$issue['created'];
                 $changeDate = date("Y-m-d", strtotime($cd));
                 $assignedto=$issue['assigned_to'];
@@ -35,7 +35,7 @@
 
                 echo '<tr class="issue"> <td class="issuetit">'.$issue['id'].' '.'<a href="php/addticket.php?issueid='.$issue['id'].'&page=viewissue.html">'.$issue['title'].'</a></td>'
             .'<td>'.$issue['type'].'</td>';
-            if($issue['status']=="Open"){
+            if($issue['status']=="OPEN"){
             echo '<td class="open-status">'.$issue['status'].'</td>'
             .'<td>'.$fname." ".$lname.'</td>'.'<td>'.$changeDate.'</td>'.'</tr>';
             
@@ -47,7 +47,7 @@
             .'<td>'.$fname." ".$lname.'</td>'.'<td>'.$changeDate.'</td>'.'</tr>';
             }
             $i++;
-            }
+        }
         }
     }
     echo '</table>';

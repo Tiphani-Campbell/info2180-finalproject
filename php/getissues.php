@@ -34,7 +34,7 @@
 
             echo '<tr class="issue"> <td class="issuetit">'.$issue['id'].' '.'<a href="php/addticket.php?issueid='.$issue['id'].'&page=viewissue.html">'.$issue['title'].'</a></td>'
             .'<td>'.$issue['type'].'</td>';
-            if($issue['status']=="Open"){
+            if($issue['status']=="OPEN"){
             echo '<td class="open-status">'.$issue['status'].'</td>'
             .'<td>'.$fname." ".$lname.'</td>'.'<td>'.$changeDate.'</td>'.'</tr>';
             
