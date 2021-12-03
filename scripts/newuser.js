@@ -119,10 +119,11 @@ window.onload = function(){
                  }
             };
 
-            var url = "php/newuser.php?" + "fname=" + String(firstname_input.value) + "&lname=" + String(lastname_input.value) + "&password=" + String(password_input.value) + "&email=" + String(email_input.value);
+            var que = "fname=" + String(firstname_input.value) + "&lname=" + String(lastname_input.value) + "&password=" + String(password_input.value) + "&email=" + String(email_input.value);
 
-            xhttp.open("GET", url); //specify the request type and where file is located in this case the file is in the same folder
-            xhttp.send(); //send php the character to find
+            xhttp.open("POST", "php/newuser.php"); //specify the request type and where file is located in this case the file is in the same folder
+            xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhttp.send(que); //send php the character to find
         }
     });
 }
