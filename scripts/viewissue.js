@@ -27,11 +27,12 @@ window.onload = function(){
             }
         };
 
-        //var url = "php/viewissue.php?" + "issue_id=" + sessionStorage.getItem('this_issue');
-        var url = "php/closebtn.php?" + "issue_id=100";
+        //var que =  "issue_id=" + sessionStorage.getItem('this_issue');
+        var que =  "issue_id=100";
 
-        xhttp.open("GET", url); //specify the request type and where file is located in this case the file is in the same folder
-        xhttp.send(); //send php the character to find
+        xhttp.open("POST", "php/closebtn.php"); //specify the request type and where file is located in this case the file is in the same folder
+        xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhttp.send(que); //send php the character to find
     }
 
     progress_button.addEventListener("click", function(e){
@@ -42,11 +43,12 @@ window.onload = function(){
             }
         };
 
-        //var url = "php/progresbtn.php?" + "issue_id=" + sessionStorage.getItem('this_issue');
-        var url = "php/progresbtn.php?" + "issue_id=100";
+        //var que = "issue_id=" + sessionStorage.getItem('this_issue');
+        var que =  "issue_id=100";
 
-        xhttp.open("GET", url); //specify the request type and where file is located in this case the file is in the same folder
-        xhttp.send(); //send php the character to find
+        xhttp.open("POST", "php/progresbtn.php"); //specify the request type and where file is located in this case the file is in the same folder
+        xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhttp.send(que); //send php the character to find
     }
 
 }

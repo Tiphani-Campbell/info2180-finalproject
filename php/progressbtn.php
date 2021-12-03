@@ -1,5 +1,5 @@
 <?php
-    $issue_id = strip_tags($_GET['issue_id']);
+    $issue_id = strip_tags($_POST['issue_id']);
 
     $host = 'localhost';
     $username = 'root';
