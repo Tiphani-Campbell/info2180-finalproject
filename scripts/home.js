@@ -5,7 +5,7 @@ window.onload=function(){
     var tickets=document.getElementById("tickets");
     var opentick=document.getElementById("open");
     var mytickets=document.getElementById("mytickets");
-
+    var all=document.getElementById("all");
 
     var xhttp = new XMLHttpRequest(); //create XMLHttpRequest object
     
@@ -39,21 +39,39 @@ window.onload=function(){
         xhttp.send(); //send php the character to find
       
     
+    });
+
+    mytickets.addEventListener("click",function(e){
+        e.preventDefault();
+        var xhttp = new XMLHttpRequest(); //create XMLHttpRequest object
+        xhttp.onreadystatechange = function(){
+                if (this.readyState == 4 && this.status == 200) {
+                tickets.innerHTML = this.responseText; //display results in the result section
+                }
+        };
+    
+        var url = "php/mytickets.php?";
+        xhttp.open("GET", url); //specify the request type and where file is located in this case the file is in the same folder
+        xhttp.send(); //send php the character to find
+        
+    
         });
 
-        mytickets.addEventListener("click",function(e){
-            e.preventDefault();
-            var xhttp = new XMLHttpRequest(); //create XMLHttpRequest object
-            xhttp.onreadystatechange = function(){
-                 if (this.readyState == 4 && this.status == 200) {
-                   tickets.innerHTML = this.responseText; //display results in the result section
-                 }
-            };
-        
-            var url = "php/mytickets.php?";
-            xhttp.open("GET", url); //specify the request type and where file is located in this case the file is in the same folder
-            xhttp.send(); //send php the character to find
-          
-        
-            });
+    all.addEventListener("click",function(e){
+        e.preventDefault();
+        var xhttp = new XMLHttpRequest(); //create XMLHttpRequest object
+        xhttp.onreadystatechange = function(){
+            if (this.readyState == 4 && this.status == 200) {
+            tickets.innerHTML = this.responseText; //display results in the result section
+            }
+        };
+    
+        var url = "php/getissues.php?";
+        xhttp.open("GET", url); //specify the request type and where file is located in this case the file is in the same folder
+        xhttp.send(); //send php the character to find
+    
+    
+        });
+
+   
 };

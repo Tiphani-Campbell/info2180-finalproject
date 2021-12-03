@@ -2,7 +2,6 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     height: 100vh;
     width: 100%;
-    overflow: hidden;
 }
 header{
     background-color: black;
@@ -40,7 +39,7 @@ main > h1{
 #right-sidebar{
     position: absolute;
     background-color: lightgray;
-    height: 500px;
+    height: 100%;
     width: 250px;
     top: 63px;
     padding-bottom: 80px;
@@ -108,6 +107,7 @@ th{
 }
 
 .open-status{
+    text-align: center;
     background-color: #00cc66;
     padding: 12px 12px 12px 12px;
     color: white;
@@ -115,6 +115,7 @@ th{
 }
 
 .closed-status{
+    text-align: center;
     background-color: #ff4500;
     padding: 12px 12px 12px 12px;
     color: white;
@@ -122,8 +123,19 @@ th{
 }
 
 .inprogress-status{
+    text-align: center;
     background-color: #e1ad01;
     padding: 12px 12px 12px 12px;
     color: black;
     border-radius: 5px;
+}
+
+#issues{
+    margin-top: 60px;
+    width: 1000px;
+    text-align: center;
+}
+.issuetit{
+    margin: 100px;
+    text-align: left;
 }
