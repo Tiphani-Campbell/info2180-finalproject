@@ -12,8 +12,26 @@ window.onload = function(){
     var lerror = document.getElementById("lname_error");
     var perror = document.getElementById("password_error");
 
+    var us=document.getElementById("newuser");
+    var usb=document.getElementById("newuserbr");
+
     //variable to store email validity
     var rt = "";
+
+    var xhttp1 = new XMLHttpRequest(); //create XMLHttpRequest object
+
+    xhttp1.onreadystatechange = function(){
+            if (this.readyState == 4 && this.status == 200) {
+                if (this.responseText != "True"){
+                    us.remove();
+                    usb.remove();
+                }
+            }
+        };
+
+    var url = "php/isadmin.php?";
+    xhttp1.open("GET", url); //specify the request type and where file is located in this case the file is in the same folder
+    xhttp1.send(); //send php the character to find
 
     /**
     * function that checks if email provided is valid

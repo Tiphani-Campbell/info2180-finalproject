@@ -1,8 +1,10 @@
 <?php
+    session_start();
     $host = 'localhost';
     $username = 'root';
     $password = '';
     $dbname = 'bugme';
+    $id=$_SESSION['user_id'];
 
     echo '<table id="issues">';
     echo '<tr id="thead">
@@ -23,7 +25,7 @@
         
         // show the publishers
         foreach ($issues as $issue) {
-            if($issue['assigned_to']=="1"){
+            if($issue['assigned_to']==$id){
                 $cd=$issue['created'];
                 $changeDate = date("Y-m-d", strtotime($cd));
                 $assignedto=$issue['assigned_to'];

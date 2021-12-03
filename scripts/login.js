@@ -13,8 +13,7 @@ window.onload = function(){
                 if (this.responseText == " Found "){
                     location.assign("homepage.html");
                 }else{
-                    email.value = "";
-                    password.value = "";
+                   //alert("Try Again");
                     alert(this.responseText);
                 }
             }

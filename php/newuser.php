@@ -9,6 +9,7 @@
     $password = '';
     $dbname = 'bugme';
 
+    date_default_timezone_set('Jamaica');
     $tday = date("Y-m-d h:i:sa");
 
     $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
