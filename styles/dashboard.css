@@ -276,3 +276,70 @@ label[for=password]{
     flex-direction: row;
     align-items: center;
 }
+
+.issue-info{
+    position: absolute;
+    background-color: lightgrey;
+    width: 200px;
+    height: 360px;
+    border-color: slategray;
+    border-style: solid;
+    border-radius: 5px;
+    padding-left: 10px;
+    left: 650px;
+    top: 110px;
+}
+.closedbtn{
+    position: absolute;
+    top: 540px;
+    left: 1000px;
+    border-color: #3385d6;
+    border-style: solid;
+    background-color: #3385d6;
+    color: white;
+    font-weight: bold;
+    height: 50px;
+    width: 215px;
+    border-radius: 5px;
+}
+.progressbtn{
+    position: absolute;
+    top: 600px;
+    left: 1000px;
+    border-color: #00cc66;
+    border-style: solid;
+    background-color: #00cc66;
+    color: white;
+    font-weight: bold;
+    height: 50px;
+    width: 215px;
+    border-radius: 5px;
+}
+#issue-title{
+    position: relative;
+    right: 7%;
+}
+#issue-id{
+    position: relative;
+    bottom: 30px;
+    right: 7%;
+}
+#issue-description{
+    position: relative;
+    word-break: break-all;
+    padding-right: 300px;
+    right: 7%;
+    color: gray;
+}
+#info-list{
+    list-style: none;
+    color: gray;
+}
+#lastcreate,#lastupdate{
+    background: url('../images/arrow.svg') no-repeat left 1px;
+    padding-left: 2em;
+    position: relative;
+    right: 12%;
+    top: 285px;
+
+}

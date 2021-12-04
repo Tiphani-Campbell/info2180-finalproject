@@ -35,7 +35,7 @@
                 $fname=$names[0]['firstname'];
                 $lname=$names[0]['lastname'];
 
-                echo '<tr class="issue"> <td class="issuetit">'.$issue['id'].' '.'<a href="php/addticket.php?issueid='.$issue['id'].'&page=viewissue.html">'.$issue['title'].'</a></td>'
+            echo '<tr class="issue"> <td class="issuetit">'.$issue['id'].' '.'<a href="php/addticket.php?issueid='.$issue['id'].'&page=viewissue.html">'.$issue['title'].'</a></td>'
             .'<td>'.$issue['type'].'</td>';
             if($issue['status']=="OPEN"){
             echo '<td class="open-status">'.$issue['status'].'</td>'
@@ -45,7 +45,7 @@
             echo '<td class="closed-status">'.$issue['status'].'</td>'
             .'<td>'.$fname." ".$lname.'</td>'.'<td>'.$changeDate.'</td>'.'</tr>';
             }else{
-                echo '<td class="inprogress-status" style="background-color:yellow;color:black;">'.$issue['status'].'</td>'
+                echo '<td class="inprogress-status">'.$issue['status'].'</td>'
             .'<td>'.$fname." ".$lname.'</td>'.'<td>'.$changeDate.'</td>'.'</tr>';
             }
             $i++;

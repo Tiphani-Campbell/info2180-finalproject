@@ -16,6 +16,9 @@ window.onload=function(){
             }else if(page == "newissue.html"){
                 history.pushState(nextState, null, URLformat(page));
                 requestContent(page);
+            }else if(page == "viewissue.html"){
+                history.pushState(nextState, null, URLformat(page));
+                requestContent(page);
             }
         }
         

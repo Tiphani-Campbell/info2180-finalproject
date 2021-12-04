@@ -35,7 +35,8 @@
 
     createissue.addEventListener("click",function(e){
         e.preventDefault();
-        location.href="newissue.html";
+        requestContent("newissue.html");
+        //location.href="newissue.html";
     });
 
     opentick.addEventListener("click",function(e){
@@ -85,5 +86,9 @@
     
     
         });
+
+function requestContent(page){
+    $("main").load(page);
+}
 
    
