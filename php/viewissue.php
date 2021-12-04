@@ -31,19 +31,15 @@
     $createdName = strval($results3[0]['firstname']) . " " . strval($results3[0]['lastname']);
 
     ?>
-
-    <div class="issue-info1">
         <h1><div id="issue-title"> <?= $issueTitle ?> </div></h1><!--issue title goes here-->
         <h3><div id="issue-id"> Issue# <?= $issue_id ?> </div></h3><!--issue id goes here-->
-    </div>
-    <div class="issue-info2">
+    
         <div id="issue-description"> <?= $issueDesc ?> </div><!--issue description goes here-->
         <ul>
             <li><div id="last-created"> Issue created on  <?= $issueCre ?> by <?= $createdName ?> </div></li><!--last created information goes here-->
             <li><div id="last-updated"></div> Issue last updated on  <?= $issueUpd ?> </li><!--last updated information goes here-->
         </ul>
-    </div>
-    <div class="issue-info3">
+    <div class = "issue-info">
         <h3>Assigned To:</h3>
         <div id="assigned-info"> <?= $assignedName ?> </div> <!--assigned to info goes here-->
 
@@ -57,5 +53,5 @@
         <div id="status-info"> <?= $issueStat ?> </div> <!--issue status goes here-->
 
     </div>
+    
 
-    <div id="button-area"></div>

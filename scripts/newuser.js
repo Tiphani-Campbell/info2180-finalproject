@@ -1,8 +1,6 @@
-"use strict";
 
-window.onload = function(){
     /* getting button, input fields and error display items from doc */
-    var submit_button = document.getElementsByClassName("button")[0];
+    var submit_button = document.getElementsByClassName("subbutton")[0];
     var firstname_input = document.getElementById("firstname");
     var lastname_input = document.getElementById("lastname");
     var password_input = document.getElementById("password");
@@ -144,4 +142,3 @@ window.onload = function(){
             xhttp.send(que); //send php the character to find
         }
     });
-}

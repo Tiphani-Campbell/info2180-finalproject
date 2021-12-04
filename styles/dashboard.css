@@ -1,15 +1,13 @@
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     height: 100vh;
-    width: 100;
-    overflow: hidden;
+    width: 100%;
 }
 header{
     background-color: black;
     color: white;
     font-size: 12px;
     height: 55px;
-    width: 1000%;
 }
 header > h2{
     position: absolute;
@@ -26,15 +24,14 @@ header > img{
 }
 .container{
     display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows:150px auto auto;
+    grid-template-columns: auto ;
+    grid-template-rows:150px auto;
 }
-
 main{
     grid-row:2;
     position: absolute;
-    top: 50px;
-    left: 350px;
+    top: 30px;
+    left: 150px;
 }
 main > h1{
     font-size: 3rem;
@@ -42,17 +39,42 @@ main > h1{
 #right-sidebar{
     position: absolute;
     background-color: lightgray;
-    height: 500px;
+    height: 100%;
     width: 250px;
     top: 63px;
     padding-bottom: 80px;
     padding-top: 30px;
     
 }
-#right-sidebar>a{
-    font-size: 14px;
-    display: inline-flex;
-    align-items: flex-end;
+.homebutton{
+    position: inherit;
+    top: 30px;
+    left: 450px;
+    height: 50px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #00cc66;
+    color: white;
+    background-color: #00cc66;
+    width:250px;
+    font-weight: bold;
+    cursor: pointer;   
+}
+
+
+li{
+    position: relative;
+    float: left;
+    padding-left: 100px;
+    list-style-type: none;
+    left: 50px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
 }
 #right-sidebar>a>img{
     padding-left: 20px;
@@ -66,11 +88,52 @@ main > h1{
     display: inline-flex;
     align-items: flex-end;
 }
-a{
-    text-decoration: none;
-    color: black;
+li>a:hover{
+    background-color:#3385d6 ;
+    color: white;
+    padding: 12px 12px 12px 12px;
+    border-radius: 5px;
+}
+th{
+    background-color: lightgray;
+}
+#filter{
+    position: relative;
+    top: 35px;
     font-weight: bold;
-    cursor: pointer;
+}
+.open-status{
+    text-align: center;
+    background-color: #00cc66;
+    padding: 12px 12px 12px 12px;
+    color: white;
+    border-radius: 5px;
+}
+
+.closed-status{
+    text-align: center;
+    background-color: #ff4500;
+    padding: 12px 12px 12px 12px;
+    color: white;
+    border-radius: 5px;
+}
+
+.inprogress-status{
+    text-align: center;
+    background-color: #e1ad01;
+    padding: 12px 12px 12px 12px;
+    color: black;
+    border-radius: 5px;
+}
+
+#issues{
+    margin-top: 60px;
+    width: 1000px;
+    text-align: center;
+}
+.issuetit{
+    margin: 100px;
+    text-align: left;
 }
 .submitbtn{
     position: absolute;
@@ -157,4 +220,59 @@ select{
     position: absolute;
     top: 510px;
     left: 5px;
+}
+label[for=firstname]{
+    font-weight: bold;
+}
+
+label[for=email]{
+    font-weight: bold;
+}
+
+label[for=lastname]{
+    font-weight: bold;
+}
+
+label[for=password]{
+    font-weight: bold;
+}
+
+#firstname{
+    width: 500px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+#password{
+    width: 500px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+#lastname{
+    width: 500px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+#email{
+    width: 500px;
+    height: 20px;
+    margin-right: 10px;
+}
+.subbutton{
+    top: 500px;
+    background-color: #3385d6;
+    width: 200px;
+    height: 50px;
+    border-color: #3385d6;
+    border-style: solid;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+.fill-out {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }

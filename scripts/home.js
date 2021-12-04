@@ -1,7 +1,4 @@
-"use strict";
-
-window.onload=function(){
-    var createissue=document.getElementsByClassName("button")[0];
+    var createissue=document.getElementsByClassName("homebutton")[0];
     var tickets=document.getElementById("tickets");
     var opentick=document.getElementById("open");
     var mytickets=document.getElementById("mytickets");
@@ -90,4 +87,3 @@ window.onload=function(){
         });
 
    
-};

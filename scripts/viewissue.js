@@ -1,7 +1,4 @@
-"use strict";
-
-window.onload = function(){
-    var area = document.getElementsByTagName('main')[0];
+   var area = document.getElementsByTagName('main')[0];
 
     var xhttp1 = new XMLHttpRequest(); //create XMLHttpRequest object
 
@@ -89,4 +86,3 @@ window.onload = function(){
     xhttp.send(); //send php the character to find
 
 
-}

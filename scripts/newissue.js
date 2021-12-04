@@ -1,6 +1,3 @@
-"use strict";
-
-window.onload=function(){
     /*gettting button and input fields and storing them in a variable*/
     var submitbtn=document.getElementsByClassName("submitbtn")[0];
     var title= document.getElementById("title");
@@ -105,4 +102,3 @@ window.onload=function(){
     });
 
 
-};
