@@ -32,7 +32,7 @@
             $fname=$names[0]['firstname'];
             $lname=$names[0]['lastname'];
 
-            echo '<tr class="issue"> <td class="issuetit">'.$issue['id'].' '.'<a href="php/addticket.php?issueid='.$issue['id'].'&page=viewissue.html">'.$issue['title'].'</a></td>'
+            echo '<tr class="issue"> <td class="issuetit">'.$issue['id'].' '.'<a class="ititle" id="'.$issue['id'].'" href="">'.$issue['title'].'</a></td>'
             .'<td>'.$issue['type'].'</td>';
             if($issue['status']=="OPEN"){
             echo '<td class="open-status">'.$issue['status'].'</td>'

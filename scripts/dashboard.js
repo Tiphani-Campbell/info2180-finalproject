@@ -42,3 +42,7 @@ window.onload=function(){
     
     
 };
+
+window.onchange=function(){
+    alert('hi');
+};

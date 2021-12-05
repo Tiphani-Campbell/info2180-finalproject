@@ -26,6 +26,25 @@
     xhttp.onreadystatechange = function(){
         if (this.readyState == 4 && this.status == 200) {
             tickets.innerHTML = this.responseText; //display results in the result section
+            var t=document.getElementsByClassName("ititle");
+            for (var i =0; i< t.length; i++){
+                t[i].addEventListener("click", function(e){
+                    e.preventDefault();
+                    sessionStorage.setItem('this_issue', this.id);
+                    let page = "viewissue.html";
+                    let nextState = {page : URLformat(page)};
+                    history.pushState(nextState, null, URLformat(page));
+                    requestContent(page);
+                });
+            }
+            function URLformat(page){
+                var pageName = page.split('.');
+                return pageName[0];
+            }
+
+            function requestContent(filename){
+                $('main').load(filename);
+            }
         }
     };
 
@@ -45,6 +64,7 @@
         xhttp.onreadystatechange = function(){
              if (this.readyState == 4 && this.status == 200) {
                tickets.innerHTML = this.responseText; //display results in the result section
+
              }
         };
     
@@ -59,9 +79,10 @@
         e.preventDefault();
         var xhttp = new XMLHttpRequest(); //create XMLHttpRequest object
         xhttp.onreadystatechange = function(){
-                if (this.readyState == 4 && this.status == 200) {
+            if (this.readyState == 4 && this.status == 200) {
                 tickets.innerHTML = this.responseText; //display results in the result section
-                }
+
+            }
         };
     
         var url = "php/mytickets.php?";
@@ -76,7 +97,8 @@
         var xhttp = new XMLHttpRequest(); //create XMLHttpRequest object
         xhttp.onreadystatechange = function(){
             if (this.readyState == 4 && this.status == 200) {
-            tickets.innerHTML = this.responseText; //display results in the result section
+                tickets.innerHTML = this.responseText; //display results in the result section
+
             }
         };
     
