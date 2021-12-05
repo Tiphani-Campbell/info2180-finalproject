@@ -39,9 +39,9 @@
         </div>
         <div class = "issue-info2">
         <div id="issue-description"> <?= $issueDesc ?> </div><!--issue description goes here-->
-        <ul id = "info-list">
-            <li id="lastcreate"><div id="last-created"> Issue created on  <?= $issueCre ?> by <?= $createdName ?> </div></li><!--last created information goes here-->
-            <li id="lastupdate"><div id="last-updated"></div> Issue last updated on  <?= $issueUpd ?> </li><!--last updated information goes here-->
+        <ul>
+            <li><div id="last-created"> Issue created on  <?= $issueCre ?> by <?= $createdName ?> </div></li><!--last created information goes here-->
+            <li><div id="last-updated"></div> Issue last updated on  <?= $issueUpd ?> </li><!--last updated information goes here-->
         </ul>
         </div>
         <div class = "issue-info3">

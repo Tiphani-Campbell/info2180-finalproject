@@ -23,7 +23,7 @@
         if (this.readyState == 4 && this.status == 200) {
             area.innerHTML = this.responseText; //display results in the result section
             var stat = document.getElementById("status-info");
-             var barea = document.getElementById("button-area");
+            var barea = document.getElementById("button-area");
             if (stat.innerHTML == " OPEN "){
                 barea.insertAdjacentHTML('afterbegin','<button type="button" class="closedbtn">Mark as Closed</button><button type="button" class="progressbtn">Mark In Progress</button>');
                 var close_button = document.getElementsByClassName("closedbtn")[0];
@@ -33,11 +33,7 @@
                     var xhttp = new XMLHttpRequest(); //create XMLHttpRequest object
                     xhttp.onreadystatechange = function(){
                         if (this.readyState == 4 && this.status == 200) {
-<<<<<<< Updated upstream
                             requestPage("viewissue.html");
-=======
-                            area.innerHTML = this.responseText;
->>>>>>> Stashed changes
                         }
                     };
 
@@ -49,15 +45,10 @@
                 });
 
                 progress_button.addEventListener("click", function(e){
-                    e.preventDefault();
                     var xhttp = new XMLHttpRequest(); //create XMLHttpRequest object
                     xhttp.onreadystatechange = function(){
                         if (this.readyState == 4 && this.status == 200) {
-<<<<<<< Updated upstream
                             requestPage("viewissue.html");
-=======
-                            area.innerHTML = this.responseText;
->>>>>>> Stashed changes
                         }
                     };
 
@@ -74,11 +65,7 @@
                 var xhttp = new XMLHttpRequest(); //create XMLHttpRequest object
                 xhttp.onreadystatechange = function(){
                     if (this.readyState == 4 && this.status == 200) {
-<<<<<<< Updated upstream
                         requestPage("viewissue.html");
-=======
-                        area.innerHTML = this.responseText;
->>>>>>> Stashed changes
                     }
                 };
 

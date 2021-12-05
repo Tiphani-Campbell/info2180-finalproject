@@ -55,7 +55,6 @@
     createissue.addEventListener("click",function(e){
         e.preventDefault();
         requestContent("newissue.html");
-        //location.href="newissue.html";
     });
 
     opentick.addEventListener("click",function(e){
@@ -67,12 +66,12 @@
 
              }
         };
-    
+
         var url = "php/openfilter.php?";
         xhttp.open("GET", url); //specify the request type and where file is located in this case the file is in the same folder
         xhttp.send(); //send php the character to find
-      
-    
+
+
     });
 
     mytickets.addEventListener("click",function(e){
@@ -84,12 +83,12 @@
 
             }
         };
-    
+
         var url = "php/mytickets.php?";
         xhttp.open("GET", url); //specify the request type and where file is located in this case the file is in the same folder
         xhttp.send(); //send php the character to find
-        
-    
+
+
         });
 
     all.addEventListener("click",function(e){
@@ -101,16 +100,14 @@
 
             }
         };
-    
+
         var url = "php/getissues.php?";
         xhttp.open("GET", url); //specify the request type and where file is located in this case the file is in the same folder
         xhttp.send(); //send php the character to find
-    
-    
+
+
         });
 
 function requestContent(page){
     $("main").load(page);
 }
-
-   
