@@ -33,7 +33,11 @@
                     var xhttp = new XMLHttpRequest(); //create XMLHttpRequest object
                     xhttp.onreadystatechange = function(){
                         if (this.readyState == 4 && this.status == 200) {
+<<<<<<< Updated upstream
                             requestPage("viewissue.html");
+=======
+                            area.innerHTML = this.responseText;
+>>>>>>> Stashed changes
                         }
                     };
 
@@ -49,7 +53,11 @@
                     var xhttp = new XMLHttpRequest(); //create XMLHttpRequest object
                     xhttp.onreadystatechange = function(){
                         if (this.readyState == 4 && this.status == 200) {
+<<<<<<< Updated upstream
                             requestPage("viewissue.html");
+=======
+                            area.innerHTML = this.responseText;
+>>>>>>> Stashed changes
                         }
                     };
 
@@ -66,7 +74,11 @@
                 var xhttp = new XMLHttpRequest(); //create XMLHttpRequest object
                 xhttp.onreadystatechange = function(){
                     if (this.readyState == 4 && this.status == 200) {
+<<<<<<< Updated upstream
                         requestPage("viewissue.html");
+=======
+                        area.innerHTML = this.responseText;
+>>>>>>> Stashed changes
                     }
                 };
 
@@ -81,7 +93,7 @@
     };
 
 
-    var url = "php/viewissue.php?";
+    var url = "php/viewissue.php?issueid="+ sessionStorage.getItem('this_issue');
 
     xhttp.open("GET", url); //specify the request type and where file is located in this case the file is in the same folder
     xhttp.send(); //send php the character to find
